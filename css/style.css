@@ -1,0 +1,112 @@
+﻿/* กำหนดฟอนต์ สี และพื้นหลังของเว็บ */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🧭 เมนูนำทาง (Navigation) ใช้ Flexbox ตามเกณฑ์ */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #4A148C; /* สีม่วงเข้ม */
+    padding: 15px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffeb3b; /* ชี้แล้วเปลี่ยนเป็นสีเหลือง */
+}
+
+/* 📦 กล่องเนื้อหาหลักตรงกลาง */
+.container {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* 🖼️ จัดการขนาดรูปภาพประวัติ */
+.profile-img {
+    max-width: 220px;
+    border-radius: 50%; /* ทำรูปเป็นวงกลม */
+    margin-top: 20px;
+    border: 5px solid #4A148C;
+}
+
+/* 💼 ส่วนของการ์ดแสดงผลงานการบ้าน (Portfolio Card) */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* ใช้ Grid จัด Layout */
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.hw-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.hw-card:hover {
+    transform: translateY(-5px); /* ขยับขึ้นเล็กน้อยตอนเมาส์ชี้ */
+}
+
+.hw-card h3 {
+    margin-top: 0;
+    color: #4A148C;
+}
+
+/* 🔘 ตกแต่งปุ่ม View และ Download */
+.btn-group {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    flex: 1;
+    transition: 0.2s;
+}
+
+.view-btn {
+    background-color: #007bff; /* สีน้ำเงิน */
+    color: white;
+}
+
+.view-btn:hover {
+    background-color: #0056b3;
+}
+
+.download-btn {
+    background-color: #28a745; /* สีเขียว */
+    color: white;
+}
+
+.download-btn:hover {
+    background-color: #218838;
+}

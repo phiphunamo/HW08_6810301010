@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - ติดต่อเรา</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="cv.html">CV</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+        <a href="hobby.html">Hobby</a>
+        <a href="project1.html">Project 1</a>
+        <a href="project2.html">Project 2</a>
+    </nav>
+
+    <div class="container">
+        <h1>📨 ติดต่อเรา / ส่งข้อความ</h1>
+        <p>หากมีข้อสงสัยหรือต้องการติดต่อสอบถาม สามารถกรอกฟอร์มด้านล่างนี้ได้เลยครับ</p>
+
+        
+        <form onsubmit="showSuccessMessage(event)" style="display: flex; flex-direction: column; gap: 15px; max-width: 500px; margin: 0 auto; text-align: left;">
+            <div>
+                <label for="name">ชื่อผู้ติดต่อ:</label>
+                <input type="text" id="name" name="name" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+
+            <div>
+                <label for="email">อีเมล:</label>
+                <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+
+            <div>
+                <label for="message">ข้อความเพิ่มเติม:</label>
+                <textarea id="message" name="message" required rows="5" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+            </div>
+
+            <button type="submit" style="background-color: #4A148C; color: white; padding: 10px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">ส่งข้อความ</button>
+        </form>
+    </div>
+
+
+    <script>
+        function showSuccessMessage(event) {
+          
+            event.preventDefault();
+
+     
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+          
+            if (name !== "" && email !== "" && message !== "") {
+                alert("ข้อมูลครบถ้วน");
+
+         
+                event.target.reset();
+            }
+        }
+    </script>
+
+</body>
+</html>
